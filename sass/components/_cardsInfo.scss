@@ -1,0 +1,52 @@
+@use '../utils' as *;
+@use './button' as *;
+
+@mixin CardsInfo() {
+	.mainCardsInfo {
+		width: 14rem;
+		// height: 28rem;
+		background: radial-gradient(50% 50% at 50% 50%, #433d60 0%, #211e2e 100%);
+		border-radius: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 2rem 1.5rem;
+		gap: 0.4rem;
+
+		&__img {
+			position: relative;
+			overflow: hidden;
+			border-radius: 50%;
+			width: 10rem;
+			height: 10rem;
+			border: 0.7rem solid rgba(14, 14, 14, 0.4);
+
+			img {
+				object-fit: cover;
+			}
+		}
+
+		h5 {
+			font-size: 1.4rem;
+			font-weight: 500;
+			margin-top: 1rem;
+		}
+
+		hr {
+			width: 60%;
+			border: 0.6px solid $grey-separator;
+			background-color: $grey-separator;
+		}
+
+		p {
+			font-size: 0.6rem;
+			font-weight: 300;
+		}
+
+		button {
+			margin-top: 1.5rem;
+			@include Button();
+		}
+	}
+}
