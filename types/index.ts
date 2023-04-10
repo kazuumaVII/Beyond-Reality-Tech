@@ -1,16 +1,17 @@
 export interface IButton {
-	title: string;
+  title: string;
 }
 export interface ItemCircleNumbersProps {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 export interface ItemInfoProps {
-	title: string;
-	description: string;
-	pathImg: string;
+  title: string;
+  description: string;
+  pathImg: string;
 }
 export interface CarrouselProps {
-	data: ItemInfoProps[];
+  Component: React.ElementType;
+  data: ItemInfoProps[];
 }

@@ -1,0 +1,190 @@
+@use '../utils' as *;
+@use '../components' as *;
+
+@mixin Contact() {
+  .contact {
+    margin-top: 2rem;
+    padding-bottom: 10rem;
+
+    &__container {
+      background: radial-gradient(50% 50% at 50% 50%, #403a5f 0%, #211e2e 100%);
+      border-radius: 2rem;
+      // height: 40rem;
+      display: flex;
+      flex-direction: column;
+      padding: 4rem 4rem;
+    }
+
+    &__title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.2rem;
+
+      h5 {
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+
+      span {
+        font-size: 1.6rem;
+        font-weight: 200;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem 1rem;
+      margin-top: 4rem;
+      justify-content: space-between;
+
+      input {
+        border: 0.1rem solid $white;
+        border-radius: 2rem;
+        height: 3rem;
+        width: 48%;
+        padding: 0 1.2rem;
+        color: $white;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+
+        &::placeholder {
+          color: $white;
+          opacity: 0.7;
+        }
+
+        &.subject {
+          width: 100%;
+        }
+
+        &.error {
+          border-color: #ef233c;
+          animation: bounce-x 1s ease-in-out 1;
+          // transition: $t1;
+        }
+      }
+
+      textarea {
+        resize: none;
+        width: 100%;
+        height: 9rem;
+        border: 0.1rem solid $white;
+        border-radius: 1.5rem;
+        padding: 0.9rem 1.2rem;
+        background: transparent;
+        color: $white;
+        overflow-y: scroll;
+
+        &::placeholder {
+          color: $white;
+          opacity: 0.7;
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
+          position: absolute;
+        }
+      }
+
+      button {
+        margin: 0 auto;
+        @include Button();
+        transition: $t01;
+        position: relative;
+        overflow: hidden;
+
+        p {
+          color: black;
+        }
+
+        img {
+          opacity: 0;
+          animation: spin 0.6s infinite linear;
+          position: absolute;
+          left: 50;
+          top: 50;
+        }
+
+        &.disable {
+          background: transparent;
+          border: 0.1rem solid $white;
+          opacity: 0.2;
+          cursor: default;
+
+          p {
+            color: $white;
+          }
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          opacity: 0;
+          transition: opacity 0.25s;
+        }
+
+        &::after {
+          left: -100%;
+          background: #34d297;
+        }
+
+        &.mailError {
+          background: transparent;
+          border: 0.1rem solid #ef233c;
+          cursor: default;
+          font-weight: 500;
+
+          p {
+            color: #ef233c;
+          }
+        }
+
+        &.validate {
+          height: 2.4rem;
+          width: 10.2rem;
+
+          &::before {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.1);
+          }
+
+          &::after {
+            opacity: 1;
+            animation: loading 1s infinite linear;
+          }
+
+          img {
+            opacity: 1;
+          }
+
+          p {
+            opacity: 0;
+          }
+        }
+      }
+
+      // .test {
+      //   width: 10rem;
+      //   height: 10rem;
+      //   background-color: red;
+      //   position: fixed;
+      //   position: absolute;
+      //   left: 50%;
+      //   bottom: 0%;
+      //   transform: translate(-50%, -50%);
+      // }
+    }
+  }
+}

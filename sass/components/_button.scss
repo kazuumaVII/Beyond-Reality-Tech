@@ -1,15 +1,15 @@
-@use '../utils' as *;
+@use "../utils" as *;
 
 @mixin Button() {
-	width: fit-content;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
-	color: $black-button;
-	font-size: 0.8rem;
-	font-weight: 600;
-	padding: 0.7rem 2.3rem;
-	border-radius: 1.3rem;
-	cursor: pointer;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $purple-linear;
+  color: $black-button;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.7rem 2.3rem;
+  border-radius: 1.3rem;
+  cursor: pointer;
 }

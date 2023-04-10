@@ -1,97 +1,97 @@
-@use '../utils' as *;
-@use './cardsInfo' as *;
+@use "../utils" as *;
+@use "./cardsInfo" as *;
 
 @mixin Carousel() {
-	.containerCarousel {
-		width: 100%;
-		height: 100%;
-		position: relative;
+  .containerCarousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
 
-		@include mediaMaxCustom(1200px) {
-			width: 90%;
-		}
+    @include mediaMaxCustom(1200px) {
+      width: 90%;
+    }
 
-		@include mediaMaxCustom(949px) {
-			width: 80%;
-		}
+    @include mediaMaxCustom(949px) {
+      width: 80%;
+    }
 
-		@include mediaMaxCustom(700px) {
-			width: 14rem;
-		}
+    @include mediaMaxCustom(700px) {
+      width: 14rem;
+    }
 
-		.carousel {
-			width: 100%;
-			height: 100%;
-			position: relative;
+    .carousel {
+      width: 100%;
+      height: 100%;
+      position: relative;
 
-			.swiper-wrapper {
-				.swiper-slide {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				}
-			}
-		}
+      .swiper-wrapper {
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
 
-		.swiper-pagination {
-			.swiper-pagination-bullet-active {
-				background-color: #cc92c2;
-			}
-		}
+    .swiper-pagination {
+      .swiper-pagination-bullet-active {
+        background-color: #cc92c2;
+      }
+    }
 
-		.swiper-button-next,
-		.swiper-button-prev {
-			position: absolute;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			background-color: rgba(14, 14, 14, 0.3);
-			border-radius: 50%;
-			width: 4rem;
-			height: 4rem;
-			transition: $t03;
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $black-border;
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      transition: $t03;
 
-			@include mediaMaxCustom(400px) {
-				width: 3.5rem;
-				height: 3.5rem;
-			}
+      @include mediaMaxCustom(400px) {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
 
-			&.disable {
-				opacity: 0;
-			}
+      &.disable {
+        opacity: 0;
+      }
 
-			&:after {
-				display: none;
-			}
+      &:after {
+        display: none;
+      }
 
-			.wrapper {
-				width: 68%;
-				height: 68%;
-				border-radius: 50%;
-				background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
-				position: relative;
+      .wrapper {
+        width: 68%;
+        height: 68%;
+        border-radius: 50%;
+        background: $purple-linear;
+        position: relative;
 
-				img {
-					position: absolute;
-					top: 50%;
-					transform: translate(-50%, -50%);
-				}
-			}
-		}
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
 
-		.swiper-button-next {
-			left: 99%;
+    .swiper-button-next {
+      left: 99%;
 
-			img {
-				left: 54%;
-			}
-		}
+      img {
+        left: 54%;
+      }
+    }
 
-		.swiper-button-prev {
-			left: 1%;
+    .swiper-button-prev {
+      left: 1%;
 
-			img {
-				left: 46%;
-			}
-		}
-	}
+      img {
+        left: 46%;
+      }
+    }
+  }
 }

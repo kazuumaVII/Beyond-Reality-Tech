@@ -4,46 +4,51 @@ import Image from 'next/image';
 import { ItemInfoProps } from '@/types';
 
 export const ItemCardsBuild: React.FC<ItemInfoProps> = (props) => {
-	const { title, description, pathImg } = props;
+  const { title, description, pathImg } = props;
 
-	return (
-		<div className="mainCardsInfo">
-			<div className="mainCardsInfo__img">
-				<Image src={pathImg} alt="Image vr" fill />
-			</div>
-			<h5>{title}</h5>
-			<hr />
-			<p>{description}</p>
-			<button>TRY IT NOW</button>
-		</div>
-	);
+  return (
+    <div className="mainCardsInfo">
+      <div className="mainCardsInfo__img">
+        <Image src={pathImg} alt="Image vr" fill />
+      </div>
+      <h5>{title}</h5>
+      <hr />
+      <p>{description}</p>
+      <button>TRY IT NOW</button>
+    </div>
+  );
 };
 
 export const ItemAboutContacts: React.FC<ItemInfoProps> = (props) => {
-	const { title, description, pathImg } = props;
+  const { title, description, pathImg } = props;
 
-	return (
-		<div className="mainItemInfo">
-			<Image src={pathImg} alt="Icon" width={50} height={50} />
-			<div className="mainItemInfo__text">
-				<h5>{title}</h5>
-				<p>{description}</p>
-			</div>
-		</div>
-	);
+  return (
+    <div className="mainItemInfo">
+      <div className="mainItemInfo__img">
+        <Image src={pathImg} alt="Icon" fill />
+      </div>
+      <div className="mainItemInfo__text">
+        <h5>{title}</h5>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
 };
 
 export const ItemCircleNumbers: React.FC<ItemInfoProps> = (props) => {
-	const { title, description } = props;
+  const { title, description } = props;
 
-	return (
-		<div className="circleNumber">
-			<div className="circleNumber__circle">
-				<h5>{title}</h5>
-			</div>
-			<div className="circleNumber__info">
-				<p>{description}</p>
-			</div>
-		</div>
-	);
+  return (
+    <div className="circleNumber">
+      <div className="circleNumber__circle">
+        <div className="circleNumber__circle__wrapper">
+          <h5>{title}</h5>
+        </div>
+      </div>
+      <div className="circleNumber__info">
+        <Image src="/assets/arrow.svg" alt="Fleche" width={23} height={23} />
+        <p>{description}</p>
+      </div>
+    </div>
+  );
 };
