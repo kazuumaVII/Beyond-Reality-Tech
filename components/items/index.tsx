@@ -3,6 +3,8 @@ import Image from 'next/image';
 
 import { ItemInfoProps } from '@/types';
 
+import { useMediaQuery } from '@/hooks';
+
 export const ItemCardsBuild: React.FC<ItemInfoProps> = (props) => {
   const { title, description, pathImg } = props;
 
@@ -22,8 +24,10 @@ export const ItemCardsBuild: React.FC<ItemInfoProps> = (props) => {
 export const ItemAboutContacts: React.FC<ItemInfoProps> = (props) => {
   const { title, description, pathImg } = props;
 
+  const activeCarousel = useMediaQuery('(max-width: 775px)');
+
   return (
-    <div className="mainItemInfo">
+    <div className={`mainItemInfo ${activeCarousel ? 'carouselStyle' : ''} `}>
       <div className="mainItemInfo__img">
         <Image src={pathImg} alt="Icon" fill />
       </div>

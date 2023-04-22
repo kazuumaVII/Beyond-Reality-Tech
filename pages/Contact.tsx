@@ -16,8 +16,6 @@ export const Contact = () => {
     message: ''
   });
 
-  console.log(formData, 'data');
-
   useEffect(() => {
     if (submit && isValidEmail) {
       setLoading(true);
@@ -67,16 +65,14 @@ export const Contact = () => {
   };
 
   return (
-    <div className="contact">
+    <section id="contact" className="contact">
       <div className="contact__container">
         <div className="contact__title">
           <h5>JOINT HIDRA</h5>
-          <Image
-            src="/assets/lineContact.svg"
-            alt="Line"
-            width={400}
-            height={20}
-          />
+          <div className="contact__title__img">
+            <Image src="/assets/lineContact.svg" alt="Line" fill />
+          </div>
+
           <span>Let’s Build Your VR Experience</span>
         </div>
 
@@ -143,6 +139,6 @@ export const Contact = () => {
           <div className="test"></div>
         </form>
       </div>
-    </div>
+    </section>
   );
 };

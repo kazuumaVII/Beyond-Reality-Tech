@@ -7,7 +7,7 @@ export const Technologie = () => {
   const [printLogo, setPrintLogo] = useState(false);
 
   return (
-    <div className="technologie">
+    <section id="techno" className="technologie">
       <div className="technologie__container">
         <div className="technologie__container__wrapper">
           <Image src="/assets/backgroundContainer.png" alt="Background" fill />
@@ -25,12 +25,9 @@ export const Technologie = () => {
               printLogo ? 'listDisplay' : 'disable'
             } `}
           >
-            <Image
-              src="/assets/arrowBottom.svg"
-              alt="Fleche"
-              width={23}
-              height={23}
-            />
+            <div className="technologie__container__button__wrapper__img">
+              <Image src="/assets/arrowBottom.svg" alt="Fleche" fill />
+            </div>
           </div>
         </button>
         <div
@@ -97,6 +94,6 @@ export const Technologie = () => {
         <ItemCircleNumbers title={'03'} description={'VR WorldUser Testing'} />
         <ItemCircleNumbers title={'04'} description={'Hydra VR Deploy'} />
       </div>
-    </div>
+    </section>
   );
 };

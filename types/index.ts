@@ -11,6 +11,9 @@ export interface ItemInfoProps {
   description: string;
   pathImg: string;
 }
+
+export interface HeaderProps {}
+
 export interface CarrouselProps {
   Component: React.ElementType;
   data: ItemInfoProps[];

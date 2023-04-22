@@ -1,27 +1,61 @@
-import React, {useState, useEffect}  from "react"
+import React, { useState, useEffect } from 'react';
 
 export const useMediaQuery = (query: string) => {
-	const [matches, setMatches] = useState(false)
-	
+  const [matches, setMatches] = useState(false);
 
-	useEffect(() => {
-		const mediaQuery = window.matchMedia(query)
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(query);
 
-		if (mediaQuery.matches !== matches) {
-			setMatches(mediaQuery.matches)
-		}
+    if (mediaQuery.matches !== matches) {
+      setMatches(mediaQuery.matches);
+    }
 
-		const listener = () => {
-			setMatches(mediaQuery.matches)
-		}
+    const listener = () => {
+      setMatches(mediaQuery.matches);
+    };
 
-		mediaQuery.addEventListener('change', listener)
+    mediaQuery.addEventListener('change', listener);
 
-		return () => {
-			mediaQuery.removeEventListener('change', listener)
-		}
+    return () => {
+      mediaQuery.removeEventListener('change', listener);
+    };
+  }, [query, matches]);
 
-	}, [query, matches])
-	
-	return matches
-}
+  return matches;
+};
+
+export const useActiveSection = (homepageOverflowRef) => {
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = homepageOverflowRef.current.scrollTop;
+
+      const sections = homepageOverflowRef.current.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.header__nav a');
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 200;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        const navLink = document.querySelector(
+          `.header__nav a[data-scroll="${section.id}"]`
+        );
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          setActiveSection(section.id);
+
+          if (navLink) {
+            navLinks.forEach((link) => link.classList.remove('active'));
+            navLink.classList.add('active');
+          }
+        }
+      });
+    };
+
+    homepageOverflowRef.current.addEventListener('scroll', handleScroll);
+    return () =>
+      homepageOverflowRef.current.removeEventListener('scroll', handleScroll);
+  }, [homepageOverflowRef]);
+
+  return activeSection;
+};

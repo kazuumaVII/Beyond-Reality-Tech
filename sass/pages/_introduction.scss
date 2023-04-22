@@ -2,93 +2,157 @@
 @use '../components' as *;
 
 @mixin Introduction() {
-	.mainIntroduction {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 4rem;
+  .mainIntroduction {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 3rem;
 
-		h4 {
-			font-size: 1.8rem;
-			font-weight: 600;
-			color: $white;
-		}
+    h4 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: $white;
+    }
 
-		h5 {
-			font-size: 1.5rem;
-			font-weight: 300;
-			white-space: nowrap;
-		}
+    h5 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      white-space: nowrap;
+    }
 
-		.itemText {
-			width: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 2rem;
-		}
+    .itemText {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
 
-		.containerArrowInfo {
-			&__left {
-				display: flex;
-				flex-direction: column;
+    .containerArrowInfo {
+      &__left {
+        display: flex;
+        flex-direction: column;
 
-				&__arrow {
-					margin-top: -1rem;
-					display: flex;
-					align-items: center;
-					gap: 1rem;
-				}
-			}
+        &__arrow {
+          margin-top: -1rem;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
 
-			&__right {
-				width: 45rem;
-			}
-		}
+      &__right {
+        width: 45rem;
+      }
 
-		.containerImage {
-			&__image {
-				min-width: 24rem;
-				min-height: 22rem;
-				border-radius: 9rem 4rem 9rem 4rem;
-				position: relative;
-				overflow: hidden;
+      @include mediaMaxCustom('830px') {
+        display: flex;
+        flex-direction: column;
 
-				img {
-					object-fit: cover;
-				}
-			}
+        width: 90%;
 
-			&__right {
-				padding-left: 2rem;
-				width: 45rem;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
+        &__left {
+          gap: 1rem;
 
-				p {
-					margin-top: 1rem;
-				}
+          &__arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-				button {
-					margin-top: 1rem;
-					@include Button();
-				}
-			}
-		}
+            img {
+              display: none;
+            }
+          }
+        }
 
-		.containerCards {
-			width: 95%;
-			height: 33rem;
-			align-self: center;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			// border: 1px solid red;
+        &__right {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
 
-			@include Carousel();
+    .containerImage {
+      &__image {
+        min-width: 21rem;
+        min-height: 22rem;
+        border-radius: 9rem 4rem 9rem 4rem;
+        position: relative;
+        overflow: hidden;
 
-			@include CardsInfo();
-		}
-	}
+        img {
+          object-fit: cover;
+        }
+      }
+
+      &__right {
+        padding-left: 2rem;
+        width: 45rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+          margin-top: 1rem;
+        }
+
+        button {
+          margin-top: 1rem;
+          @include Button();
+        }
+      }
+
+      @include mediaMaxCustom('830px') {
+        display: flex;
+        flex-direction: column;
+
+        &__image {
+          min-width: 21rem;
+          min-height: 22rem;
+        }
+
+        &__right {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          text-align: center;
+          padding: 0;
+
+          p {
+            margin-top: 2rem;
+          }
+
+          button {
+            margin-top: 2rem;
+          }
+        }
+      }
+
+      @include mediaMaxCustom('450px') {
+        &__image {
+          min-width: 15rem;
+          min-height: 17rem;
+          border-radius: 6rem 4rem 6rem 4rem;
+        }
+      }
+    }
+
+    .containerCards {
+      width: 95%;
+      height: 33rem;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // border: 1px solid red;
+
+      @include Carousel();
+
+      @include CardsInfo();
+    }
+  }
 }

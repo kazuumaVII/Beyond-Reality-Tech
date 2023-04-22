@@ -1,0 +1,78 @@
+@use '../utils' as *;
+// @use '. as *;
+
+@mixin NavBar() {
+  .navBar {
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+
+      a {
+        color: $white;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative;
+        transition: $t01;
+
+        hr {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          width: 0%;
+          opacity: 0;
+          transition: 0.3s linear;
+          border-radius: 1rem;
+          border: 1px solid #c0b7e8;
+
+          &.top {
+            top: -90%;
+          }
+
+          &.bottom {
+            bottom: -90%;
+          }
+        }
+
+        &.active {
+          color: $purple-linear;
+
+          hr {
+            width: 140%;
+            opacity: 1;
+          }
+        }
+
+        &:hover {
+          color: #c0b7e8;
+        }
+      }
+    }
+
+    &__button {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+
+      &__contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        border: 0.1rem solid $white;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.7rem 2.3rem;
+        border-radius: 1.3rem;
+      }
+
+      &__try {
+        // @include Button();
+      }
+    }
+  }
+}

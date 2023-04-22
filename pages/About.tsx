@@ -1,11 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { ItemAboutContacts } from '@/components/items';
-
 export const About = () => {
   return (
-    <div className="mainAbout">
+    <section id="about" className="mainAbout">
       <div className="topContainer">
         <div className="topContainer__info">
           <div className="topContainer__info__text">
@@ -30,24 +28,6 @@ export const About = () => {
           <Image src="/assets/girlVr.png" alt="Image vr" fill />
         </div>
       </div>
-      <div className="bottomContainer">
-        <ItemAboutContacts
-          title="Pay Us a Visit"
-          description="Union St, Seattle, WA 98101, United States"
-          pathImg="/assets/location-Icon.svg"
-        />
-
-        <ItemAboutContacts
-          title="Give Us a Call"
-          description="(110) 1111-1010"
-          pathImg="/assets/phone-call.svg"
-        />
-        <ItemAboutContacts
-          title="Send Us a Message"
-          description="Contact@HydraVTech.com"
-          pathImg="/assets/mail.svg"
-        />
-      </div>
-    </div>
+    </section>
   );
 };

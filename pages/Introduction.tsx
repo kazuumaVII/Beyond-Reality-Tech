@@ -8,7 +8,7 @@ import { Carousel } from '@/components/Carousel';
 
 export const Introduction = () => {
   return (
-    <div className="mainIntroduction">
+    <section id="services" className="mainIntroduction">
       <div className="containerArrowInfo itemText">
         <div className="containerArrowInfo__left">
           <h4>INTRODUCTION</h4>
@@ -81,6 +81,6 @@ export const Introduction = () => {
       <div className="containerCards">
         <Carousel Component={ItemCardsBuild} data={dataCarouselBuild} />
       </div>
-    </div>
+    </section>
   );
 };

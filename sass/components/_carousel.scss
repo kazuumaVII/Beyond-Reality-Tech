@@ -1,11 +1,12 @@
-@use "../utils" as *;
-@use "./cardsInfo" as *;
+@use '../utils' as *;
+@use './cardsInfo' as *;
 
 @mixin Carousel() {
   .containerCarousel {
     width: 100%;
     height: 100%;
     position: relative;
+    // border: 1px solid red;
 
     @include mediaMaxCustom(1200px) {
       width: 90%;
@@ -94,4 +95,5 @@
       }
     }
   }
+  @content;
 }
