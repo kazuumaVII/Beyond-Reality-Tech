@@ -124,7 +124,17 @@
 
       button {
         margin: 0 auto;
-        @include Button();
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $purple-linear;
+        color: $black-button;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.7rem 2.3rem;
+        border-radius: 1.3rem;
+        cursor: pointer;
         transition: $t01;
         position: relative;
         overflow: hidden;

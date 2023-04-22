@@ -251,11 +251,14 @@
         &__arrow {
           display: flex;
           align-items: center;
+          justify-content: center;
           margin-top: -1rem;
           gap: 1rem;
+
           h5 {
             font-size: 1.5rem;
             font-weight: 300;
+            align-items: center;
             white-space: nowrap;
           }
         }

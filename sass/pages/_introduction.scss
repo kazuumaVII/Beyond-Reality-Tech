@@ -109,8 +109,9 @@
         flex-direction: column;
 
         &__image {
-          min-width: 21rem;
-          min-height: 22rem;
+          min-width: 16rem;
+          min-height: 17rem;
+          border-radius: 4rem 2rem 4rem 2rem;
         }
 
         &__right {

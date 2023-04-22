@@ -49,9 +49,11 @@ export const Contact = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    setIsValidEmail(regex.test(formData.email));
-    setSubmit(true);
+    if (!isEmpty) {
+      const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+      setIsValidEmail(regex.test(formData.email));
+      setSubmit(true);
+    }
   };
 
   const handleChange = (
@@ -136,7 +138,6 @@ export const Contact = () => {
 
             {isValidEmail ? <p>Send to email</p> : <p>Email invalide</p>}
           </button>
-          <div className="test"></div>
         </form>
       </div>
     </section>

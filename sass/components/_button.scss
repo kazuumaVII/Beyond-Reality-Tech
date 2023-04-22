@@ -1,4 +1,4 @@
-@use "../utils" as *;
+@use '../utils' as *;
 
 @mixin Button() {
   width: fit-content;
@@ -12,4 +12,32 @@
   padding: 0.7rem 2.3rem;
   border-radius: 1.3rem;
   cursor: pointer;
+  transition: all 1000ms;
+  position: relative;
+  overflow: hidden;
+  // outline: 2px solid #2c9caf;
+
+  &:hover {
+    color: #ffffff;
+    transform: scale(1.04);
+    // outline: 2px solid #70bdca;
+    box-shadow: 4px 5px 17px -4px #268391;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #2c9caf;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+
+  &:hover::before {
+    width: 250%;
+  }
 }

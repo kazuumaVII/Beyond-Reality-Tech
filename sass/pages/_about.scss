@@ -96,17 +96,23 @@
           display: flex;
           align-items: center;
           gap: 2rem;
+          margin-left: 0.2rem;
 
           button {
             @include Button();
 
-            @include mediaMaxCustom(900px) {
-              font-size: 1.2vw;
+            // @include mediaMaxCustom(900px) {
+            //   font-size: 1.2vw;
+            // }
+
+            @include mediaMaxCustom(660px) {
+              padding: 0.6rem 1rem;
+              font-size: 0.7rem;
             }
 
-            @include mediaMaxCustom(700px) {
-              padding: 0.6rem 1.2rem;
-              font-size: 0.5rem;
+            @include mediaMaxCustom(600px) {
+              padding: 0.6rem 1.4rem;
+              font-size: 0.9rem;
             }
           }
 
@@ -150,6 +156,20 @@
           min-width: 17rem;
           height: 15rem;
           min-height: 15rem;
+        }
+
+        @include mediaMaxCustom(800px) {
+          width: 17rem;
+          min-width: 20rem;
+          height: 15rem;
+          min-height: 18rem;
+        }
+
+        @include mediaMaxCustom(380px) {
+          min-width: 5rem;
+          min-height: 5rem;
+          width: 80vw;
+          height: 73vw;
         }
       }
     }

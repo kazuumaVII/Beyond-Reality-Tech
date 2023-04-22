@@ -63,9 +63,9 @@ export const Technologie = () => {
       </div>
       <div className={`technologie__build ${printLogo ? 'remove' : ''} `}>
         <div className="technologie__build__left">
-          <h4>WHY BUILD</h4>
+          <h4>HOW WE BUILD</h4>
           <div className="technologie__build__left__arrow">
-            <h5>WITH HYDRA ?</h5>
+            <h5>WITH HYDRA VR?</h5>
             <Image
               src="/assets/longArrowRight.svg"
               alt="Fleche"
