@@ -34,7 +34,7 @@ jspm_packages/
 creds.js
  
 # Private Files
-*.json
+# *.json
 *.csv
 *.csv.gz
 *.tsv
