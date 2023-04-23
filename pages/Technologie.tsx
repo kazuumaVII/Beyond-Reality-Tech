@@ -3,18 +3,62 @@ import Image from 'next/image';
 
 import { ItemCircleNumbers } from '@/components/items';
 
+import { dataCircleNumbers } from '@/static';
+
+import { animateOnScroll } from '@/utils';
+
+import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
 export const Technologie = () => {
+  const root = useRef();
+  gsap.registerPlugin(ScrollTrigger);
+  const q = gsap.utils.selector(root);
+
   const [printLogo, setPrintLogo] = useState(false);
 
+  useEffect(() => {
+    animateOnScroll(
+      q('#titleCase'),
+      { opacity: 0, y: 100 },
+      { opacity: 1, y: 0 },
+      '-50% 70%',
+      '100% 50%'
+    );
+
+    animateOnScroll(
+      q('#subTitleCase'),
+      { opacity: 0 },
+      { opacity: 1 },
+      '-50% 50%',
+      '100% 30%'
+    );
+
+    animateOnScroll(
+      q('.arrowRight'),
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0 },
+      '30% 80%',
+      '70% 40%'
+    );
+    animateOnScroll(
+      q('#textArrow'),
+      { opacity: 0 },
+      { opacity: 1 },
+      '30% 80%',
+      '70% 40%'
+    );
+  }, []);
+
   return (
-    <section id="techno" className="technologie">
+    <section id="techno" className="technologie" ref={root}>
       <div className="technologie__container">
         <div className="technologie__container__wrapper">
           <Image src="/assets/backgroundContainer.png" alt="Background" fill />
         </div>
         <div className="technologie__container__absolute">
-          <h5>TECHNOLOGIES & HARDWARE</h5>
-          <span>USED BY HYDRA VR</span>
+          <h5 id="titleCase">TECHNOLOGIES & HARDWARE</h5>
+          <span id="subTitleCase">USED BY HYDRA VR</span>
         </div>
         <button
           onClick={() => setPrintLogo(!printLogo)}
@@ -71,10 +115,11 @@ export const Technologie = () => {
               alt="Fleche"
               width={200}
               height={80}
+              className="arrowRight"
             />
           </div>
         </div>
-        <div className="technologie__build__right">
+        <div className="technologie__build__right" id="textArrow">
           <p>
             Vitae sapien pellentesque habitant morbi tristique senectus et netus
             et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit
@@ -86,13 +131,13 @@ export const Technologie = () => {
       </div>
 
       <div className="technologie__containerCirlceNumbers">
-        <ItemCircleNumbers
-          title={'01'}
-          description={'3D Conception & Design'}
-        />
-        <ItemCircleNumbers title={'02'} description={'Interaction Design'} />
-        <ItemCircleNumbers title={'03'} description={'VR WorldUser Testing'} />
-        <ItemCircleNumbers title={'04'} description={'Hydra VR Deploy'} />
+        {dataCircleNumbers.map((item, index) => (
+          <ItemCircleNumbers
+            title={item.title}
+            description={item.description}
+            key={index}
+          />
+        ))}
       </div>
     </section>
   );

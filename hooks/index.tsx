@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, RefObject } from 'react';
 
 export const useMediaQuery = (query: string) => {
   const [matches, setMatches] = useState(false);
@@ -24,14 +24,22 @@ export const useMediaQuery = (query: string) => {
   return matches;
 };
 
-export const useActiveSection = (homepageOverflowRef) => {
+interface HomepageOverflowRef {
+  current: HTMLDivElement | null;
+  scrollTop: number;
+}
+
+export const useActiveSection = (
+  homepageOverflowRef: RefObject<HTMLElement>
+) => {
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = homepageOverflowRef.current.scrollTop;
+      const scrollPosition = homepageOverflowRef.current?.scrollTop || 0;
 
-      const sections = homepageOverflowRef.current.querySelectorAll('section');
+      const sections =
+        homepageOverflowRef.current?.querySelectorAll('section') || [];
       const navLinks = document.querySelectorAll('.header__nav a');
 
       sections.forEach((section) => {
@@ -52,9 +60,14 @@ export const useActiveSection = (homepageOverflowRef) => {
       });
     };
 
-    homepageOverflowRef.current.addEventListener('scroll', handleScroll);
-    return () =>
-      homepageOverflowRef.current.removeEventListener('scroll', handleScroll);
+    if (homepageOverflowRef.current) {
+      homepageOverflowRef.current.addEventListener('scroll', handleScroll);
+      return () =>
+        homepageOverflowRef.current?.removeEventListener(
+          'scroll',
+          handleScroll
+        );
+    }
   }, [homepageOverflowRef]);
 
   return activeSection;

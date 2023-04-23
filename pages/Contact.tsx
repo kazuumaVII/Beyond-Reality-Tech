@@ -6,6 +6,7 @@ export const Contact = () => {
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [submit, setSubmit] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [isCheckIcon, setIsCheckIcon] = useState(false);
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -16,22 +17,31 @@ export const Contact = () => {
     message: ''
   });
 
+  console.log(isCheckIcon, 'lalalal');
+
   useEffect(() => {
     if (submit && isValidEmail) {
       setLoading(true);
 
       setTimeout(() => {
         setLoading(false);
+        setIsCheckIcon(true);
 
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: ''
-        });
+        setTimeout(() => {
+          setIsCheckIcon(false);
+
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            subject: '',
+            message: ''
+          });
+        }, 2000);
       }, 4000);
+
+      // setIsCheckIcon(false);
     }
   }, [submit]);
 
@@ -123,6 +133,35 @@ export const Contact = () => {
             onChange={handleChange}
           />
           <button
+            className={`${
+              loading && isValidEmail && !isCheckIcon ? 'validate' : ''
+            } 
+						${isEmpty ? 'disable' : ''}
+						${submit && !isValidEmail ? 'mailError' : ''}
+						${isValidEmail && isCheckIcon ? 'checkIcon' : ''}
+					`}
+            type="submit"
+          >
+            <Image
+              src="/assets/reload.svg"
+              className="reload"
+              alt="Reload"
+              width={20}
+              height={20}
+            />
+
+            <Image
+              src="/assets/check.svg"
+              className="check"
+              alt="Reload"
+              width={30}
+              height={30}
+            />
+
+            {isValidEmail ? <p>Send to email</p> : <p>Email invalide</p>}
+          </button>
+
+          {/* <button
             className={`${loading && isValidEmail ? 'validate' : ''} 
 						${isEmpty ? 'disable' : ''}
 						${submit && !isValidEmail ? 'mailError' : ''}
@@ -135,9 +174,7 @@ export const Contact = () => {
               width={20}
               height={20}
             />
-
-            {isValidEmail ? <p>Send to email</p> : <p>Email invalide</p>}
-          </button>
+          </button> */}
         </form>
       </div>
     </section>

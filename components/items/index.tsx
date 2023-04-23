@@ -11,7 +11,7 @@ export const ItemCardsBuild: React.FC<ItemInfoProps> = (props) => {
   return (
     <div className="mainCardsInfo">
       <div className="mainCardsInfo__img">
-        <Image src={pathImg} alt="Image vr" fill />
+        {pathImg && <Image src={pathImg} alt="Image vr" fill />}
       </div>
       <h5>{title}</h5>
       <hr />
@@ -29,7 +29,7 @@ export const ItemAboutContacts: React.FC<ItemInfoProps> = (props) => {
   return (
     <div className={`mainItemInfo ${activeCarousel ? 'carouselStyle' : ''} `}>
       <div className="mainItemInfo__img">
-        <Image src={pathImg} alt="Icon" fill />
+        {pathImg && <Image src={pathImg} alt="Icon" fill />}
       </div>
       <div className="mainItemInfo__text">
         <h5>{title}</h5>
@@ -40,7 +40,7 @@ export const ItemAboutContacts: React.FC<ItemInfoProps> = (props) => {
 };
 
 export const ItemCircleNumbers: React.FC<ItemInfoProps> = (props) => {
-  const { title, description } = props;
+  const { title, description, index } = props;
 
   return (
     <div className="circleNumber">

@@ -32,6 +32,15 @@
     color: $white;
   }
 
+  :root {
+    --backgroundColor: #fef852;
+    --backgroundColorSecondary: #fffc94;
+    --textPrimaryColor: #2a2a2a;
+
+    --headlineBig: clamp(3rem, 10vw, 15rem);
+    --headlineSmall: clamp(1rem, 1.2vw, 6rem);
+  }
+
   .homepage {
     max-width: 80rem;
     width: 100%;

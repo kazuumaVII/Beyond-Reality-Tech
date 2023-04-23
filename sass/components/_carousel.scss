@@ -82,6 +82,14 @@
     .swiper-button-next {
       left: 99%;
 
+      &:hover {
+        .wrapper {
+          img {
+            animation: bounce-x-right 1.5s ease infinite;
+          }
+        }
+      }
+
       img {
         left: 54%;
       }
@@ -89,6 +97,14 @@
 
     .swiper-button-prev {
       left: 1%;
+
+      &:hover {
+        .wrapper {
+          img {
+            animation: bounce-x-left 1.5s ease infinite;
+          }
+        }
+      }
 
       img {
         left: 46%;

@@ -9,10 +9,13 @@ export interface ItemCircleNumbersProps {
 export interface ItemInfoProps {
   title: string;
   description: string;
-  pathImg: string;
+  pathImg?: string;
+  index: number;
 }
 
-export interface HeaderProps {}
+export interface HeaderProps {
+  homepageOverflowRef: React.RefObject<HTMLDivElement>;
+}
 
 export interface CarrouselProps {
   Component: React.ElementType;

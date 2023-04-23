@@ -45,43 +45,35 @@ export const BurgerNav = () => {
       <div className={menu_class}>
         <nav>
           <a
-            // className={`nav ${isActive('about')}`}
             data-scroll="about"
             href="#about"
             onClick={(e) => handleClick(e, 'about')}
           >
             About
-            {/* <hr className="top" /> */}
             <hr className="bottom" />
           </a>
           <a
-            // className={`nav ${isActive('services')}`}
             data-scroll="services"
             href="#services"
             onClick={(e) => handleClick(e, 'services')}
           >
             Services
-            {/* <hr className="top" /> */}
             <hr className="bottom" />
           </a>
           <a
-            // className={`nav ${isActive('techno')}`}
             data-scroll="techno"
             href="#techno"
             onClick={(e) => handleClick(e, 'techno')}
           >
             Technologies
-            {/* <hr className="top" /> */}
             <hr className="bottom" />
           </a>
           <a
-            // className={`nav ${isActive('contact')}`}
             data-scroll="contact"
             href="#contact"
             onClick={(e) => handleClick(e, 'contact')}
           >
             Contact
-            {/* <hr className="top" /> */}
             <hr className="bottom" />
           </a>
         </nav>

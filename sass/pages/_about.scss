@@ -101,8 +101,9 @@
           button {
             @include Button();
 
-            // @include mediaMaxCustom(900px) {
-            //   font-size: 1.2vw;
+            // @include mediaMaxCustom(715px) {
+            //   font-size: 0.7rem;
+            //   padding: 0.6rem 1rem;
             // }
 
             @include mediaMaxCustom(660px) {
@@ -120,6 +121,9 @@
             position: relative;
             width: 3rem;
             height: 3rem;
+            transform: translate(-78px, 0px);
+            transition: all 1s ease 0s;
+            opacity: 0;
 
             @include mediaMaxCustom(900px) {
               width: 2.5rem;
@@ -134,6 +138,11 @@
             @include mediaMaxCustom(600px) {
               display: none;
             }
+          }
+
+          button:hover + .topContainer__info__button__img {
+            transform: translate(0px, 0px);
+            opacity: 1;
           }
         }
       }
@@ -158,18 +167,16 @@
           min-height: 15rem;
         }
 
-        @include mediaMaxCustom(800px) {
-          width: 17rem;
+        @include mediaMaxCustom(600px) {
           min-width: 20rem;
-          height: 15rem;
           min-height: 18rem;
         }
 
-        @include mediaMaxCustom(380px) {
-          min-width: 5rem;
-          min-height: 5rem;
+        @include mediaMaxCustom(400px) {
+          min-width: 7vw;
           width: 80vw;
-          height: 73vw;
+          height: 75vw;
+          min-height: 7vw;
         }
       }
     }

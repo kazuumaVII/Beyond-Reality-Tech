@@ -45,6 +45,25 @@ export const dataAboutContact = [
   }
 ];
 
+export const dataCircleNumbers = [
+  {
+    title: '01',
+    description: '3D Conception & Design'
+  },
+  {
+    title: '02',
+    description: 'Interaction Design'
+  },
+  {
+    title: '03',
+    description: 'VR WorldUser Testing'
+  },
+  {
+    title: '04',
+    description: 'Hydra VR Deploy'
+  }
+];
+
 export const dataSocialMedia = [
   {
     pathImg: '/assets/facebook.svg'

@@ -15,7 +15,11 @@ export default function Home() {
       <div id="App">
         <div className="homepage">
           <Header homepageOverflowRef={homepageOverflowRef} />
-          <div className="homepage__overflow" ref={homepageOverflowRef}>
+          <div
+            className="homepage__overflow"
+            id="overflowScroll"
+            ref={homepageOverflowRef}
+          >
             <About />
             <Introduction />
             <Technologie />

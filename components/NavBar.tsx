@@ -2,7 +2,9 @@ import React, { MouseEvent, useState, useEffect } from 'react';
 
 import { useActiveSection } from '@/hooks';
 
-export const NavBar = (props) => {
+import { HeaderProps } from '@/types';
+
+export const NavBar = (props: HeaderProps) => {
   const { homepageOverflowRef } = props;
 
   const activeSection = useActiveSection(homepageOverflowRef);

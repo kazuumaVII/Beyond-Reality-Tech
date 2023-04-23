@@ -122,6 +122,10 @@
           font-weight: 600;
           position: relative;
 
+          @include mediaMaxCustom(630px) {
+            font-size: 1.5rem;
+          }
+
           hr {
             opacity: 0;
             width: 0%;

@@ -209,8 +209,34 @@
             opacity: 1;
           }
 
+          .check {
+            opacity: 0;
+          }
+
           p {
             opacity: 0;
+          }
+        }
+
+        &.checkIcon {
+          &::after,
+          img {
+            opacity: 1;
+            animation: none;
+            transition: none;
+            transform: scale(2px);
+          }
+
+          p {
+            opacity: 0;
+          }
+
+          .reload {
+            opacity: 0;
+          }
+
+          .check {
+            opacity: 1;
           }
         }
       }

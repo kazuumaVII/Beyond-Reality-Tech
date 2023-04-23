@@ -164,42 +164,58 @@
         transition: $t03;
         z-index: 1;
         opacity: 0;
+        // border: 1px solid red;
 
-        @include mediaMaxCustom(649px) {
+        @include mediaMaxCustom(703px) {
           justify-content: center;
           top: 90%;
+          // height: fit-content;
+
+          img:nth-child(4) {
+            margin-top: -3rem;
+          }
         }
+
+        @include mediaMaxCustom(501px) {
+          img:nth-child(3) {
+            margin-top: -1rem;
+          }
+
+          img:nth-child(4) {
+            margin-top: -1.3rem;
+          }
+        }
+
         @include mediaMaxCustom(321px) {
           gap: 0rem 6rem;
+
+          img:nth-child(3) {
+            margin-top: -2.5rem;
+          }
+
+          img:nth-child(4) {
+            margin-top: -2.5rem;
+          }
         }
 
         &.display {
           top: 135%;
           opacity: 1;
 
-          @include mediaMaxCustom(649px) {
-            top: 160%;
-
-            img:nth-child(4) {
-              margin-top: -2rem;
-            }
+          @include mediaMaxCustom(830px) {
+            top: 150%;
           }
 
-          @include mediaMaxCustom(447px) {
-            img:nth-child(3) {
-              margin-top: -1.8rem;
-            }
+          @include mediaMaxCustom(703px) {
+            top: 160%;
+          }
+
+          @include mediaMaxCustom(501px) {
+            top: 170%;
           }
 
           @include mediaMaxCustom(321px) {
-            top: 210%;
-
-            img:nth-child(3) {
-              margin-top: -2.3rem;
-            }
-            img:nth-child(4) {
-              margin-top: -3rem;
-            }
+            top: 190%;
           }
         }
       }
@@ -239,6 +255,18 @@
 
       &.remove {
         margin-top: 12rem;
+
+        @include mediaMaxCustom(703px) {
+          margin-top: 14rem;
+        }
+
+        @include mediaMaxCustom(501px) {
+          margin-top: 17rem;
+        }
+
+        @include mediaMaxCustom(321px) {
+          margin-top: 27rem;
+        }
       }
 
       &__left {
@@ -293,6 +321,11 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          transition: $t03;
+
+          &:hover {
+            transform: scale(1.1);
+          }
 
           &__wrapper {
             background: $purple-linear;
@@ -305,7 +338,7 @@
 
             h5 {
               color: $black-button;
-              font-size: 4rem;
+              font-size: 2.8rem;
             }
           }
         }
@@ -317,10 +350,17 @@
           gap: 1rem;
           width: 11rem;
 
+          img {
+          }
+
           p {
             font-size: 1.1rem;
             font-weight: 500;
           }
+        }
+
+        .circleNumber__circle:hover + .circleNumber__info img {
+          animation: bounce-x-low 1.5s ease 1;
         }
       }
     }
