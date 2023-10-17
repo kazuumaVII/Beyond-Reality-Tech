@@ -20,12 +20,12 @@ const About = () => {
           <div className="topContainer__info__button">
             <button>BUID YOUR WORLD</button>
             <div className="topContainer__info__button__img">
-              <Image src="/assets/arrowRight.svg" alt="Fleche" fill />
+              <Image src="./assets/arrowRight.svg" alt="Fleche" fill />
             </div>
           </div>
         </div>
         <div className="topContainer__image" id="right">
-          <Image src="/assets/girlVr.png" alt="Image vr" fill />
+          <Image src="./assets/girlVr.png" alt="Image vr" fill />
         </div>
       </div>
     </section>

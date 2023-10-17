@@ -14,7 +14,7 @@ const Technologie = () => {
     <section id="techno" className="technologie" ref={root}>
       <div className="technologie__container">
         <div className="technologie__container__wrapper">
-          <Image src="/assets/backgroundContainer.png" alt="Background" fill />
+          <Image src="./assets/backgroundContainer.png" alt="Background" fill />
         </div>
         <div className="technologie__container__absolute">
           <h5 id="titleCase">TECHNOLOGIES & HARDWARE</h5>
@@ -30,7 +30,7 @@ const Technologie = () => {
             } `}
           >
             <div className="technologie__container__button__wrapper__img">
-              <Image src="/assets/arrowBottom.svg" alt="Fleche" fill />
+              <Image src="./assets/arrowBottom.svg" alt="Fleche" fill />
             </div>
           </div>
         </button>
@@ -40,25 +40,25 @@ const Technologie = () => {
           } `}
         >
           <Image
-            src="/assets/unreal.png"
+            src="./assets/unreal.png"
             alt="Unreal logo"
             width={80}
             height={80}
           />
           <Image
-            src="/assets/unity.png"
+            src="./assets/unity.png"
             alt="Unity logo"
             width={120}
             height={120}
           />
           <Image
-            src="/assets/oculus.png"
+            src="./assets/oculus.png"
             alt="Oculus logo"
             width={120}
             height={120}
           />
           <Image
-            src="/assets/vive.png"
+            src="./assets/vive.png"
             alt="Vive logo"
             width={120}
             height={120}
@@ -71,7 +71,7 @@ const Technologie = () => {
           <div className="technologie__build__left__arrow">
             <h5>WITH BEYOND VR?</h5>
             <Image
-              src="/assets/longArrowRight.svg"
+              src="./assets/longArrowRight.svg"
               alt="Fleche"
               width={200}
               height={80}

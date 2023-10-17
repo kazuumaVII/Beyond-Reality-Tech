@@ -50,7 +50,7 @@ export const ItemCircleNumbers: React.FC<ItemInfoProps> = (props) => {
         </div>
       </div>
       <div className="circleNumber__info">
-        <Image src="/assets/arrow.svg" alt="Fleche" width={23} height={23} />
+        <Image src="./assets/arrow.svg" alt="Fleche" width={23} height={23} />
         <p>{description}</p>
       </div>
     </div>

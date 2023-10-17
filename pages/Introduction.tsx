@@ -17,7 +17,7 @@ const Introduction = () => {
           <div className="containerArrowInfo__left__arrow">
             <h5>TO BEYOND VR</h5>
             <Image
-              src="/assets/longArrowRight.svg"
+              src="./assets/longArrowRight.svg"
               alt="Fleche"
               width={200}
               height={80}
@@ -41,7 +41,7 @@ const Introduction = () => {
       </div>
       <div className="containerImage itemText">
         <div className="containerImage__image">
-          <Image src="/assets/menVr.png" alt="Image vr" fill />
+          <Image src="./assets/menVr.png" alt="Image vr" fill />
         </div>
         <div className="containerImage__right">
           <h4>ABOUT</h4>
@@ -77,7 +77,7 @@ const Introduction = () => {
           <div className="containerArrowInfo__left__arrow">
             <h5>WITH BEYOND ?</h5>
             <Image
-              src="/assets/longArrowRight.svg"
+              src="./assets/longArrowRight.svg"
               alt="Fleche"
               width={200}
               height={80}

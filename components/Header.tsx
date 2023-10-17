@@ -18,7 +18,7 @@ export default function Header(props: HeaderProps) {
       <div className="header__logo">
         <div className="header__logo__img">
           <div className="header__logo__img__wrapper">
-            <Image src="/assets/logo2.png" alt="logo" fill />
+            <Image src="./assets/logo2.png" alt="logo" fill />
           </div>
         </div>
         <div className="header__logo__text">

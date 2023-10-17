@@ -70,7 +70,7 @@ export const Carousel: React.FC<CarrouselProps> = (props) => {
       >
         <div className="wrapper">
           <Image
-            src="/assets/shortArrowRight.svg"
+            src="./assets/shortArrowRight.svg"
             alt="Fleche"
             width={30}
             height={30}
@@ -85,7 +85,7 @@ export const Carousel: React.FC<CarrouselProps> = (props) => {
       >
         <div className="wrapper">
           <Image
-            src="/assets/shortArrowLeft.svg"
+            src="./assets/shortArrowLeft.svg"
             alt="Fleche"
             width={30}
             height={30}

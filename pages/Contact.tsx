@@ -82,7 +82,7 @@ const Contact = () => {
         <div className="contact__title">
           <h5>JOINT Beyond</h5>
           <div className="contact__title__img">
-            <Image src="/assets/lineContact.svg" alt="Line" fill />
+            <Image src="./assets/lineContact.svg" alt="Line" fill />
           </div>
 
           <span>Let’s Build Your VR Experience</span>
@@ -143,7 +143,7 @@ const Contact = () => {
             type="submit"
           >
             <Image
-              src="/assets/reload.svg"
+              src="./assets/reload.svg"
               className="reload"
               alt="Reload"
               width={20}
@@ -151,7 +151,7 @@ const Contact = () => {
             />
 
             <Image
-              src="/assets/check.svg"
+              src="./assets/check.svg"
               className="check"
               alt="Reload"
               width={30}
