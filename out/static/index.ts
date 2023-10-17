@@ -6,28 +6,28 @@ export const dataCarouselBuild: ItemInfoProps[] = [
     title: 'Simulation',
     description:
       'Embodies realism at its peak. Dive into meticulously crafted worlds and experience moments strikingly true to life.',
-    pathImg: '/assets/simulation.png'
+    pathImg: './assets/simulation.png'
   },
   {
     index: 1,
     title: 'Education',
     description:
       'Turns learning into an immersive adventure. Explore complex subjects with unparalleled clarity and engage in lessons that leave a lasting impression.',
-    pathImg: '/assets/education.png'
+    pathImg: './assets/education.png'
   },
   {
     index: 2,
     title: 'Self-Care',
     description:
       'Is a virtual oasis of well-being. Discover soothing spaces, guided meditations, and relaxation sessions to nourish the mind and soul.',
-    pathImg: '/assets/selfcare.png'
+    pathImg: './assets/selfcare.png'
   },
   {
     index: 3,
     title: 'Outdoor',
     description:
       'Takes you on natural escapades without leaving your living room. Experience the grandeur of nature, from mountain peaks to mysterious ocean depths.',
-    pathImg: '/assets/outdoor.png'
+    pathImg: './assets/outdoor.png'
   }
 ];
 
@@ -35,17 +35,17 @@ export const dataAboutContact = [
   {
     title: 'Pay Us a Visit',
     description: 'Union St, Seattle, WA 98101, United States',
-    pathImg: '/assets/location-Icon.svg'
+    pathImg: './assets/location-Icon.svg'
   },
   {
     title: 'Give Us a Call',
     description: '(110) 1111-1010"',
-    pathImg: '/assets/phone-call.svg'
+    pathImg: './assets/phone-call.svg'
   },
   {
     title: 'Send Us a Message',
     description: 'Contact@BeyondTech.com',
-    pathImg: '/assets/mail.svg'
+    pathImg: './assets/mail.svg'
   }
 ];
 
@@ -70,7 +70,7 @@ export const dataCircleNumbers = [
 
 export const dataSocialMedia = [
   {
-    pathImg: '/assets/facebook.svg'
+    pathImg: './assets/facebook.svg'
   },
   {
     pathImg: './assets/instagram.svg'
