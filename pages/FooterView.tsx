@@ -10,7 +10,7 @@ export const FooterView = () => {
       <div className="footer__top">
         <div className="footer__top__imgLogo">
           <div className="footer__top__imgLogo__img">
-            <Image src="/assets/logoHydra.png" alt="logo" fill />
+            <Image src="/assets/logo2.png" alt="logo" fill />
           </div>
         </div>
 
@@ -28,7 +28,7 @@ export const FooterView = () => {
           <Image src="/assets/separatorVertical.png" alt="logo" fill />
         </div>
         <div className="footer__top__media">
-          <h5>SOCIALIZE WITH HYDRA</h5>
+          <h5>SOCIALIZE WITH BEYOND</h5>
           <div className="footer__top__media__web">
             {dataSocialMedia.map((item) => (
               <div className="footer__top__media__web__item">
@@ -46,7 +46,7 @@ export const FooterView = () => {
           <h5>2023</h5>
           <h5>©</h5>
           <h5>-</h5>
-          <h5>HYDRA FAKE LANDING PAGE</h5>
+          <h5>BEYOND FAKE LANDING PAGE</h5>
           <h5>-</h5>
           <h5>NO COMMERCIAL PURPOSE</h5>
         </div>

@@ -51,6 +51,9 @@
 
       &__right {
         width: 45rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
       }
 
       @include mediaMaxCustom('830px') {

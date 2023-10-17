@@ -80,7 +80,7 @@ export const Contact = () => {
     <section id="contact" className="contact">
       <div className="contact__container">
         <div className="contact__title">
-          <h5>JOINT HIDRA</h5>
+          <h5>JOINT Beyond</h5>
           <div className="contact__title__img">
             <Image src="/assets/lineContact.svg" alt="Line" fill />
           </div>
@@ -158,23 +158,8 @@ export const Contact = () => {
               height={30}
             />
 
-            {isValidEmail ? <p>Send to email</p> : <p>Email invalide</p>}
+            {isValidEmail ? <p>Send to email</p> : <p>invalid email</p>}
           </button>
-
-          {/* <button
-            className={`${loading && isValidEmail ? 'validate' : ''} 
-						${isEmpty ? 'disable' : ''}
-						${submit && !isValidEmail ? 'mailError' : ''}
-					`}
-            type="submit"
-          >
-            <Image
-              src="/assets/reload.svg"
-              alt="Reload"
-              width={20}
-              height={20}
-            />
-          </button> */}
         </form>
       </div>
     </section>

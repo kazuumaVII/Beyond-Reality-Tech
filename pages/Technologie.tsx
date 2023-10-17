@@ -7,48 +7,10 @@ import { dataCircleNumbers } from '@/static';
 
 import { animateOnScroll } from '@/utils';
 
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
 export const Technologie = () => {
-  const root = useRef();
-  gsap.registerPlugin(ScrollTrigger);
-  const q = gsap.utils.selector(root);
+  const root = useRef<HTMLElement | null>(null);
 
   const [printLogo, setPrintLogo] = useState(false);
-
-  useEffect(() => {
-    animateOnScroll(
-      q('#titleCase'),
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0 },
-      '-50% 70%',
-      '100% 50%'
-    );
-
-    animateOnScroll(
-      q('#subTitleCase'),
-      { opacity: 0 },
-      { opacity: 1 },
-      '-50% 50%',
-      '100% 30%'
-    );
-
-    animateOnScroll(
-      q('.arrowRight'),
-      { opacity: 0, x: -100 },
-      { opacity: 1, x: 0 },
-      '30% 80%',
-      '70% 40%'
-    );
-    animateOnScroll(
-      q('#textArrow'),
-      { opacity: 0 },
-      { opacity: 1 },
-      '30% 80%',
-      '70% 40%'
-    );
-  }, []);
 
   return (
     <section id="techno" className="technologie" ref={root}>
@@ -58,7 +20,7 @@ export const Technologie = () => {
         </div>
         <div className="technologie__container__absolute">
           <h5 id="titleCase">TECHNOLOGIES & HARDWARE</h5>
-          <span id="subTitleCase">USED BY HYDRA VR</span>
+          <span id="subTitleCase">USED BY BEYOND VR</span>
         </div>
         <button
           onClick={() => setPrintLogo(!printLogo)}
@@ -109,7 +71,7 @@ export const Technologie = () => {
         <div className="technologie__build__left">
           <h4>HOW WE BUILD</h4>
           <div className="technologie__build__left__arrow">
-            <h5>WITH HYDRA VR?</h5>
+            <h5>WITH BEYOND VR?</h5>
             <Image
               src="/assets/longArrowRight.svg"
               alt="Fleche"
@@ -121,11 +83,12 @@ export const Technologie = () => {
         </div>
         <div className="technologie__build__right" id="textArrow">
           <p>
-            Vitae sapien pellentesque habitant morbi tristique senectus et netus
-            et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit
-            amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra
-            aliquet eget sit amet tellus. Ornare lectus sit amet est placerat
-            in. Lectus magna fringilla urna porttitor rhoncus vitae.
+            At "Beyond VR", our building process blends artistic passion with
+            innovative technology. Collaborating closely, our teams turn bold
+            visions into immersive realities using state-of-the-art tools. Every
+            detail is user-optimized, ensuring seamless immersion. With "Beyond
+            VR", we're offering not just an experience, but a journey into the
+            uncharted.
           </p>
         </div>
       </div>
@@ -135,6 +98,7 @@ export const Technologie = () => {
           <ItemCircleNumbers
             title={item.title}
             description={item.description}
+            index={index}
             key={index}
           />
         ))}

@@ -13,17 +13,51 @@
       display: flex;
       align-items: center;
       gap: 1.3rem;
+      width: 15rem;
+      height: 6rem;
+      position: relative;
 
       &__img {
-        position: relative;
-        width: 5rem;
-        height: 5rem;
+        position: absolute;
+        left: 13%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 8rem;
+        height: 8rem;
+
+        @include mediaMaxCustom(800px) {
+          width: 6rem;
+          height: 6rem;
+          left: 20%;
+        }
+
+        &__wrapper {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          img {
+            object-fit: cover;
+          }
+        }
       }
 
       &__text {
-        position: relative;
-        width: 4rem;
-        height: 2rem;
+        position: absolute;
+        left: 75%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        h1 {
+          color: white;
+          font-family: 'Comfortaa', sans-serif !important;
+          font-weight: 400;
+          letter-spacing: 0.3rem;
+
+          @include mediaMaxCustom(800px) {
+            font-size: 1.5rem;
+          }
+        }
       }
     }
 

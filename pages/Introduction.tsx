@@ -8,45 +8,8 @@ import { Carousel } from '@/components/Carousel';
 
 import { animateOnScroll } from '@/utils';
 
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
-
 export const Introduction = () => {
-  const root = useRef();
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-  const q = gsap.utils.selector(root);
-
-  useEffect(() => {
-    animateOnScroll(
-      q('#buttonLeft'),
-      { opacity: 0 },
-      { opacity: 1 },
-      '0% 82%',
-      '30% 70%'
-    );
-    animateOnScroll(
-      q('.containerImage__image'),
-      { opacity: 0 },
-      { opacity: 1 },
-      '30% 97%',
-      '70% 30%'
-    );
-    animateOnScroll(
-      q('.arrowRight'),
-      { opacity: 0, x: -100 },
-      { opacity: 1, x: 0 },
-      '30% 90%',
-      '70% 60%'
-    );
-    animateOnScroll(
-      q('#textArrow'),
-      { opacity: 0 },
-      { opacity: 1 },
-      '30% 90%',
-      '70% 80%'
-    );
-  }, []);
+  const root = useRef<HTMLElement | null>(null);
 
   return (
     <section id="services" className="mainIntroduction" ref={root}>
@@ -54,7 +17,7 @@ export const Introduction = () => {
         <div className="containerArrowInfo__left">
           <h4>INTRODUCTION</h4>
           <div className="containerArrowInfo__left__arrow">
-            <h5>TO HYDRA VR</h5>
+            <h5>TO BEYOND VR</h5>
             <Image
               src="/assets/longArrowRight.svg"
               alt="Fleche"
@@ -65,11 +28,16 @@ export const Introduction = () => {
         </div>
         <div className="containerArrowInfo__right">
           <p>
-            Vitae sapien pellentesque habitant morbi tristique senectus et netus
-            et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit
-            amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra
-            aliquet eget sit amet tellus. Ornare lectus sit amet est placerat
-            in. Lectus magna fringilla urna porttitor rhoncus vitae.
+            Welcome to "Beyond VR", the next frontier of immersive experience.
+            In this exceptional realm, we've fused cutting-edge technology with
+            the boundaries of human imagination to bring you an adventure that
+            transcends anything you've known before.
+          </p>
+          <p>
+            Imagine worlds where every detail is so vivid it gives you
+            goosebumps, digital landscapes that surpass the majesty of nature
+            itself, and interactive scenarios that immerse you in stories of
+            unmatched depth and complexity.
           </p>
         </div>
       </div>
@@ -79,18 +47,28 @@ export const Introduction = () => {
         </div>
         <div className="containerImage__right">
           <h4>ABOUT</h4>
-          <h5>HYDRA VR</h5>
+          <h5>BEYOND VR</h5>
           <p>
-            Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus
-            mattis rhoncus urna neque viverra justo. Vivamus at augue eget arcu
-            dictum. Ultrices gravida dictum fusce ut placerat orci. Aenean et
-            tortor at risus viverra adipiscing at in. Mattis aliquam faucibus
-            purus in massa. Est placerat in egestas erat imperdiet sed.
-            Consequat semper viverra nam libero justo laoreet sit amet. Aliquam
-            etiam erat velit scelerisque in dictum non consectetur a. Laoreet
-            sit amet cursus sit amet. Vel eros donec ac odio tempor orci
-            dapibus. Sem nulla pha retra diam sit amet nisl suscipit adipiscing
-            bibendum. Leo a diam sollicitudi n tempor.
+            Beyond VR" is more than just a virtual reality platform; it's the
+            culmination of years of research, passion, and innovation. From our
+            earliest forays into the world of VR, we've always had a clear
+            vision: to push conventional boundaries and deliver experiences that
+            transcend reality.
+          </p>
+          <p>
+            Our team, consisting of visionary engineers, talented content
+            creators, and passionate designers, is committed to reimagining
+            what's possible in the virtual space. With state-of-the-art
+            technologies, collaborations with industry leaders, and insatiable
+            curiosity, "Beyond VR" has crafted worlds that exceed imagination,
+            offering an immersion so deep it blurs the line between the virtual
+            and the real.
+          </p>
+          <p>
+            Whether you're a VR enthusiast or a curious novice, "Beyond VR"
+            promises to take you on a journey that will awaken your senses,
+            ignite your imagination, and forever change your perception of
+            reality.
           </p>
           <button id="buttonLeft">LET’S GET IN TOUCH</button>
         </div>
@@ -99,7 +77,7 @@ export const Introduction = () => {
         <div className="containerArrowInfo__left">
           <h4>WHY BUILD</h4>
           <div className="containerArrowInfo__left__arrow">
-            <h5>WITH HYDRA?</h5>
+            <h5>WITH BEYOND ?</h5>
             <Image
               src="/assets/longArrowRight.svg"
               alt="Fleche"
@@ -111,11 +89,11 @@ export const Introduction = () => {
         </div>
         <div className="containerArrowInfo__right" id="textArrow">
           <p>
-            Vitae sapien pellentesque habitant morbi tristique senectus et netus
-            et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit
-            amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra
-            aliquet eget sit amet tellus. Ornare lectus sit amet est placerat
-            in. Lectus magna fringilla urna porttitor rhoncus vitae.
+            Building with "Beyond VR" means embracing the future of immersive
+            reality. Our platform provides unmatched tools to turn your ideas
+            into tangible experiences. With cutting-edge technology and
+            unwavering support, "Beyond VR" is the perfect partner for those
+            looking to redefine the horizons of virtual reality.
           </p>
         </div>
       </div>

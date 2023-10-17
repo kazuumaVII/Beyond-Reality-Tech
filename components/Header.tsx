@@ -11,16 +11,18 @@ import { HeaderProps } from '@/types';
 export default function Header(props: HeaderProps) {
   const { homepageOverflowRef } = props;
 
-  const activeBurger = useMediaQuery('(max-width: 950px)');
+  const activeBurger = useMediaQuery('(max-width: 1100px)');
 
   return (
     <div className="header">
       <div className="header__logo">
         <div className="header__logo__img">
-          <Image src="/assets/logoHydra.png" alt="logo" fill />
+          <div className="header__logo__img__wrapper">
+            <Image src="/assets/logo2.png" alt="logo" fill />
+          </div>
         </div>
         <div className="header__logo__text">
-          <Image src="/assets/textHydra.png" alt="logo" fill />
+          <h1>BEYOND</h1>
         </div>
       </div>
 
@@ -31,7 +33,7 @@ export default function Header(props: HeaderProps) {
           <NavBar homepageOverflowRef={homepageOverflowRef} />
 
           <div className="header__button">
-            <button className="header__button__try">JOIN HYDRA</button>
+            <button className="header__button__try">JOIN BEYOND</button>
           </div>
         </>
       )}

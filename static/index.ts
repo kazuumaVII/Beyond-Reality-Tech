@@ -4,25 +4,25 @@ export const dataCarouselBuild: ItemInfoProps[] = [
   {
     title: 'Simulation',
     description:
-      'Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.',
+      'Embodies realism at its peak. Dive into meticulously crafted worlds and experience moments strikingly true to life.',
     pathImg: '/assets/simulation.png'
   },
   {
     title: 'Education',
     description:
-      'Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.',
+      'Turns learning into an immersive adventure. Explore complex subjects with unparalleled clarity and engage in lessons that leave a lasting impression.',
     pathImg: '/assets/education.png'
   },
   {
     title: 'Self-Care',
     description:
-      'Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.',
+      'Is a virtual oasis of well-being. Discover soothing spaces, guided meditations, and relaxation sessions to nourish the mind and soul.',
     pathImg: '/assets/selfcare.png'
   },
   {
     title: 'Outdoor',
     description:
-      'Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.',
+      'Takes you on natural escapades without leaving your living room. Experience the grandeur of nature, from mountain peaks to mysterious ocean depths.',
     pathImg: '/assets/outdoor.png'
   }
 ];
@@ -40,7 +40,7 @@ export const dataAboutContact = [
   },
   {
     title: 'Send Us a Message',
-    description: 'Contact@HydraVTech.com',
+    description: 'Contact@BeyondTech.com',
     pathImg: '/assets/mail.svg'
   }
 ];
@@ -60,7 +60,7 @@ export const dataCircleNumbers = [
   },
   {
     title: '04',
-    description: 'Hydra VR Deploy'
+    description: 'Beyond VR Deploy'
   }
 ];
 
