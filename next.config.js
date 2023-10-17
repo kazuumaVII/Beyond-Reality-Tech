@@ -4,7 +4,8 @@ const nextConfig = {
   basePath: '/Beyond-Reality-Tech',
   assetPrefix: '/Beyond-Reality-Tech/',
   images: {
-    unoptimized: true
+    loader: 'imgix',
+    path: ''
   }
 };
 
