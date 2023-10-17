@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-import { animateOnScroll } from '@/utils';
-
-export const About = () => {
+const About = () => {
   return (
     <section id="about" className="mainAbout">
       <div className="topContainer">
@@ -33,3 +31,5 @@ export const About = () => {
     </section>
   );
 };
+
+export default About;

@@ -1,11 +1,11 @@
 import React, { MouseEvent, useState, useEffect, useRef } from 'react';
 
 import Header from '@/components/Header';
-import { About } from './About';
-import { Introduction } from './Introduction';
-import { Technologie } from './Technologie';
-import { Contact } from './Contact';
-import { FooterView } from './FooterView';
+import About from './About';
+import Introduction from './Introduction';
+import Technologie from './Technologie';
+import Contact from './Contact';
+import FooterView from './FooterView';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';

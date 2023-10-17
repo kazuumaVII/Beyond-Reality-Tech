@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 
-export const Contact = () => {
+const Contact = () => {
   const [isEmpty, setIsEmpty] = useState(true);
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [submit, setSubmit] = useState(false);
@@ -165,3 +165,5 @@ export const Contact = () => {
     </section>
   );
 };
+
+export default Contact;

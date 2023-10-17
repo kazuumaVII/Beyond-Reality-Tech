@@ -5,9 +5,7 @@ import { ItemCircleNumbers } from '@/components/items';
 
 import { dataCircleNumbers } from '@/static';
 
-import { animateOnScroll } from '@/utils';
-
-export const Technologie = () => {
+const Technologie = () => {
   const root = useRef<HTMLElement | null>(null);
 
   const [printLogo, setPrintLogo] = useState(false);
@@ -106,3 +104,5 @@ export const Technologie = () => {
     </section>
   );
 };
+
+export default Technologie;

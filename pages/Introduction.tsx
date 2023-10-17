@@ -6,9 +6,7 @@ import { dataCarouselBuild } from '@/static';
 import { ItemCardsBuild } from '@/components/items';
 import { Carousel } from '@/components/Carousel';
 
-import { animateOnScroll } from '@/utils';
-
-export const Introduction = () => {
+const Introduction = () => {
   const root = useRef<HTMLElement | null>(null);
 
   return (
@@ -104,3 +102,5 @@ export const Introduction = () => {
     </section>
   );
 };
+
+export default Introduction;

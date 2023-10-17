@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { dataSocialMedia } from '@/static';
 
-export const FooterView = () => {
+const FooterView = () => {
   return (
     <div className="footer">
       <div className="footer__top">
@@ -54,3 +54,5 @@ export const FooterView = () => {
     </div>
   );
 };
+
+export default FooterView;
